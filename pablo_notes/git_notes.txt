@@ -1,0 +1,126 @@
+git environment setup
+---------------------
+# Username/email
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+# Colors
+git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
+git config --global color.interactive auto
+
+# Push behavior (v2.0 default)
+git config --global push.default simple
+
+# Editor (pick one)
+$ git config --global core.editor vim
+$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"         # 32-bit Windows
+$ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"   # 64-bit windows
+
+# Line endings (pick the one for platform)
+$ git config --global core.autocrlf input    # OS X or Linux 
+$ git config --global core.autocrlf true     # Windows 
+
+# shell prompt with with branch name/status,
+# Windows - Probably already for you in git bash
+# Linux - see http://stackoverflow.com/a/24716445/922612
+#       - see https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Bash
+
+# Diff - Can be set by user - advanced
+
+
+git environment - SSH key setup
+--------------------------------
+# XXX: ssh-keygen - we will discuss
+* key agents
+* how it interacts with git
+
+
+
+
+Git local
+-------------
+* clone (only once)
+* init
+	--bare for shared repo (admins only)
+
+help
+
+log, gitk
+
+add
+	introdude concept of staging
+	-p process of interactive
+commit
+	--amend
+	--revert 
+
+status
+	3 sections- staged/index, unstaged, untracked
+
+checkout
+
+branch
+	create/delete (-d, -D*)
+	-m 
+merge 
+	(solve conflicts)  merge is a commit (with 2 or more parents)
+
+diff
+	-- cached
+
+blame
+
+--------- after some experience ---------
+stash
+
+cherry-pick
+
+clean
+	removes untracked files (can be dangerous)
+-----------------------------------------
+
+ignore
+	- how to setup
+	- do not put large files, especially binaries
+	- do not put generated files (object files, build binaries, deps, ...)
+	- use ide relative paths rooted at project root, good advice for any project
+	- include necessary files for project, not ide caches/temporary files
+
+------------- advanced - rewrites history and dangerous -------------------
+rebase
+	advanced do not unless you are ready  will change history
+
+reset
+	by default git will NOT loose data unless you tell it to
+	VERY careful
+	soft/mixed/hard
+----------------------------------------------------------------------------
+
+
+
+
+Git sharing code / publish
+--------------------------
+* clone (init, remote, fetch, branch, checkout)
+remote - add 
+push
+	full syntax
+	simplified syntax
+		tracking
+		tracking configuration
+pull - fetch/merge
+
+
+
+
+Additional resources
+-------
+ProGit
+https://git-scm.com/book/en/v2
+
+Atlassian has very good tutorial
+https://www.atlassian.com/git/
+
+pablo@maurin.org
