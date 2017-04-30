@@ -19,8 +19,8 @@ $ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -m
 $ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"   # 64-bit windows
 
 # Line endings (pick the one for platform)
-$ git config --global core.autocrlf input    # OS X or Linux 
-$ git config --global core.autocrlf true     # Windows 
+$ git config --global core.autocrlf input    # OS X or Linux
+$ git config --global core.autocrlf true     # Windows
 
 # shell prompt with with branch name/status,
 # Windows - Probably already for you in git bash
@@ -104,7 +104,7 @@ reset
 Git sharing code / publish
 --------------------------
 * clone (init, remote, fetch, branch, checkout)
-remote - add 
+remote - add
 push
 	full syntax
 	simplified syntax
