@@ -26,39 +26,16 @@ class: center, middle
 
 ---
 
+name: agenda
+
 # Agenda
 
 1. Get Git
 2. Before Gitting started (env setup)
-3. Other comments
-    svn terminology not the same as git, assume you don't know what words mean
-4. Review of major concepts
-    Distributed
-    git tracks contents only
-
-    File System
-    Staging Area
-    Git Database
-
-    Each commit identified by a sha1 hash
-    Behind each commit is a view of the file system tree
-    Merge *is* a commit (with two or more parents)
-    Branch is a pointer to the commit history
-
-5. Review of local repo commands
-    git help
-    git help <command>
-
-    git add
-    git rm
-    git mv
-
-    git commit
-
-    git branch
-    git merge
-
-    .gitignore
+3. Remarks
+4. Major Concepts (Review)
+5. Local Workflow (Review) 
+6. Local Repo Commands (Review)
 
 6. Create GitHub account
 
@@ -138,7 +115,7 @@ sudo apt-get install git
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 
-# Line endings (pick the one for platform)
+# Line endings (pick the one for development platform)
 $ git config --global core.autocrlf input    # OS X or Linux
 $ git config --global core.autocrlf true     # Windows
 ```
@@ -147,19 +124,58 @@ $ git config --global core.autocrlf true     # Windows
 
 class: center, middle
 
-# Walkthrough: Creating a repository
+# Remarks
+
+???
+
+Git uses similar terminology to SVN.
+SVN terminology not the same as git.
+Assume you don't know what words mean
 
 ---
 
-class: center, middle
+# Major Concepts (Review)
 
-# Walkthrough: Sharing code with others
+* Distributed
+* Git tracks contents only
+* Each commit identified by a sha1 hash
+* Behind each commit is a view of the file system tree
+* Merge *is* a commit (with two or more parents)
+* Branch is a pointer to the commit history
 
 ---
 
-class: center, middle
+# Local Workflow (Review)
 
-# ...
+* File System
+* Staging Area
+* Git Database
+
+---
+
+#  Local Repo Commands (Review)
+
+```bash
+# How to use a command
+git help
+git help <command>
+
+# Stage changes before commit
+git add
+git rm
+git mv
+
+# Commit changes to Git database
+git commit
+
+# Branching and merging
+git branch
+git merge
+
+# List of file git should not manage
+.gitignore
+```
+
 ---
 
 # Additional resources
