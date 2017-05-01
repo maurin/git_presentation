@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to use Git Version Control (Sharing Code)</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# How to use Git version control
+## Sharing Code
+
+---
+
+# Agenda
+
+1. Get Git
+2. Before Gitting started (env setup)
+3. Other comments
+    svn terminology not the same as git, assume you don't know what words mean
+4. Review of major concepts
+    Distributed
+    git tracks contents only
+
+    File System
+    Staging Area
+    Git Database
+
+    Each commit identified by a sha1 hash
+    Behind each commit is a view of the file system tree
+    Merge *is* a commit (with two or more parents)
+    Branch is a pointer to the commit history
+
+5. Review of local repo commands
+    git help
+    git help <command>
+
+    git add
+    git rm
+    git mv
+
+    git commit
+
+    git branch
+    git merge
+
+    .gitignore
+
+6. Create GitHub account
+
+7. Walkthrough
+    create a repo at git hub
+    follow github commands to upload repo
+        remote
+        push
+
+    show at GitHub
+    modify on GitHub -add readme
+        fetch
+fetching changes from a remote.  This is your local view of the database at the remote side
+
+git URL for project
+    have people get it
+Cloaning project from git hub
+pushing your changes to a remote
+
+
+* A remote is a link to get to a git database that is somewhere else
+0.  Tell git how where to find the other database and give it a name
+
+1. fetch
+2. push
+
+
+pull = fetch + merge
+
+There is an implicit branch because these are distributed systems.  Therefore the solution is a merge
+
+
+6. Workflows
+    Centralized
+    GitHub/Integration manager *
+    Gradschool model
+
+6. Other ways to share repo
+    Thumb drive / mounted filesystem
+    another computer over ssh
+    git daemon
+7. SSH Keys
+ssh keys
+
+---
+
+# Get Git
+
+Windows
+* Windows Git Installer (https://git-scm.com/download/win)
+* **Git for Windows package**
+```url
+https://git-for-windows.github.io/
+```
+
+Mac
+* Xcode provided
+* Mac Git installer (https://git-scm.com/download/mac)
+* **Homebrew**
+* MacPorts
+```bash
+$ brew install git
+```
+
+Linux
+* Use package manager of your choice
+```bash
+sudo apt-get install git
+```
+
+---
+
+# Before Starting - Environment Setup
+
+```bash
+# Username/email
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+# Line endings (pick the one for platform)
+$ git config --global core.autocrlf input    # OS X or Linux
+$ git config --global core.autocrlf true     # Windows
+```
+
+---
+
+class: center, middle
+
+# Walkthrough: Creating a repository
+
+---
+
+class: center, middle
+
+# Walkthrough: Sharing code with others
+
+---
+
+class: center, middle
+
+# ...
+---
+
+# Additional resources
+
+## ProGit
+https://git-scm.com/book/en/v2
+
+## Atlassian has very good tutorial
+https://www.atlassian.com/git/
+
+---
+
+class: center, middle
+
+# Thank You
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
