@@ -1,0 +1,55 @@
+Make sure to have your environment setup with name and email
+
+To get started:
+$ git init      # What we will use
+- or -
+$ git clone     # Show, but don't use
+
+---
+
+$ git init      # <-- use this, create repo
+$ git status    # helpful to see what what the repo is in
+
+# create some files
+
+$ git status    # see file is untracked
+$ git add       # add file to index/staing area
+$ git stats     # see file in staging area
+$ git commit    # commit changes to git database
+$ git status    # clean working tree
+$ gitk          # see new commit
+
+# repeat 3 times explainging with greater detail of what is happening
+
+Add .gitignore  # don't include runtime artifacts in repo
+
+----
+
+Branches
+
+$ git branch having_fun     # create branch with name 'having_fun'
+$ git checkout having_fun   # make this the working branch
+
+#edit a file and add to repo (twice to grow tree)
+$ git add ...
+$ git commit ...
+
+
+# switch back to 'master' branch
+$ git checkout master
+
+#edit a file and add to repo on 'master' branch
+$ git add ...
+$ git commit ...
+
+----
+
+Merge branches
+
+$ git merge         # show clean merge
+
+---
+
+# force conflicts
+
+$ git merge         # resolve conflicts
