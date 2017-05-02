@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to use Git Version Control (Sharing Code)</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# How to use Git version control
+## Sharing Code
+
+---
+
+name: agenda
+
+# Agenda
+
+1. Get Git
+2. Before Gitting started (env setup)
+3. Remarks
+4. Major Concepts (Review)
+5. Local Workflow (Review) 
+6. Local Repo Commands (Review)
+7. Create GitHub Account
+8. Walkthrough: Working with Remotes
+9. Git Pull
+10. Workflows
+11. GitHub Pull Requests
+12. Other ways to share repo
+13. SSH Keys
+14. Additional resources
+
+---
+
+# Get Git
+
+Windows
+* Windows Git Installer (https://git-scm.com/download/win)
+* **Git for Windows package**
+```url
+https://git-for-windows.github.io/
+```
+
+Mac
+* Xcode provided
+* Mac Git installer (https://git-scm.com/download/mac)
+* **Homebrew**
+* MacPorts
+```bash
+$ brew install git
+```
+
+Linux
+* Use package manager of your choice
+```bash
+sudo apt-get install git
+```
+
+---
+
+# Before Starting - Environment Setup
+
+```bash
+# Username/email
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+# Line endings (pick the one for development platform)
+$ git config --global core.autocrlf input    # OS X or Linux
+$ git config --global core.autocrlf true     # Windows
+```
+
+---
+
+class: center, middle
+
+# Remarks
+
+???
+
+Git uses similar terminology to SVN.
+SVN terminology not the same as git.
+Assume you don't know what words mean
+
+---
+
+# Major Concepts (Review)
+
+* Distributed
+* Git tracks contents only
+* Each commit identified by a sha1 hash
+* Behind each commit is a view of the file system tree
+* Merge *is* a commit (with two or more parents)
+* Branch is a pointer to the commit history
+
+---
+
+# Local Workflow (Review)
+
+* File System
+* Staging Area
+* Git Database
+
+---
+
+#  Local Repo Commands (Review)
+
+```bash
+# How to use a command?
+git help
+git help <command>
+
+# Stage changes before commit
+git add
+git rm
+git mv
+
+# Commit changes to Git database
+git commit
+
+# Branching and merging
+git branch
+git merge
+
+# List of file git should not manage
+.gitignore
+```
+
+---
+
+class: center, middle
+
+# Create GitHub Account
+
+---
+
+# Walkthrough: Working with Remotes
+
+A Git *remote* is a URL for another git database with which you can share code
+
+```bash
+git remote
+
+git fetch
+git push
+```
+
+???
+
+    create a repo at git hub
+    follow github commands to upload repo
+        remote
+        push
+
+    show at GitHub
+    modify on GitHub -add readme
+        fetch
+fetching changes from a remote.  This is your local view of the database at the remote side
+
+git URL for project
+    have people get it
+Cloaning project from git hub
+pushing your changes to a remote
+
+* A remote is a link to get to a git database that is somewhere else
+0.  Tell git how where to find the other database and give it a name
+
+1. fetch
+2. push
+
+---
+
+# Git Pull
+
+pull = fetch + merge
+
+???
+
+pull = fetch + merge
+
+There is an implicit branch because these are distributed systems.  Therefore the solution is a merge
+
+---
+
+# Workflows
+
+* Centralized
+* GitHub/Integration manager
+* Peer-Peer/Gradschool model
+
+---
+
+class: center, middle
+
+# GitHub Pull Requests
+
+---
+
+# Workflows
+
+* Centralized
+* GitHub/Integration manager
+* Peer-Peer/Gradschool model
+
+---
+
+# Other ways to share repo
+
+* Thumb drive / mounted filesystem
+* another computer over ssh
+* git daemon
+* E-mail
+
+---
+
+class: center, middle
+
+# SSH Keys
+
+---
+
+# Additional resources
+
+## ProGit
+https://git-scm.com/book/en/v2
+
+## Atlassian has very good tutorial
+https://www.atlassian.com/git/
+
+## Interactive Git Cheatsheet
+http://ndpsoftware.com/git-cheatsheet.html
+
+---
+
+class: center, middle
+
+# Thank You
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
