@@ -184,21 +184,30 @@ $ git revert            # Give me the anti-commit, commit
 
 ---
 
+# Git Algebra
 
+* ref~ is shorthand for ref~1 and means the commit's first parent. ref~2 means the commit's first parent's first parent
+* ref^ is shorthand for ref^1 and means the commit's first parent. But where the two differ is that ref^2 means the commit's second parent.
 
+---
 
+.center[![Git graph](git-graph.svg)]
 
+---
 
 # Additional resources
 
-## ProGit
+### ProGit
 https://git-scm.com/book/en/v2
 
-## Atlassian has very good tutorial
+### Atlassian has very good tutorial
 https://www.atlassian.com/git/
 
-## Interactive Git Cheatsheet
+### Interactive Git Cheatsheet
 http://ndpsoftware.com/git-cheatsheet.html
+
+### Git Algbra (grah image source)
+http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
 
 ---
 
