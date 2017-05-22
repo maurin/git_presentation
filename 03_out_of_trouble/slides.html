@@ -37,7 +37,7 @@ name: agenda
 4. Push/Fetch (Review)
 5. Stashing work
 6. Selectively 'add' content
-7. Change last commit
+7. Simple Changes
 8. Git Algebra
 9. cherry-pick
 10. revert
@@ -53,8 +53,6 @@ DELETE ME: --- Pablo Notes ---
 
 Syntax for traversing graph
 
-git cherry-pick
-git revert
 
 
 git reset --hard
@@ -174,12 +172,14 @@ $ git add -i    # more control for building up staging
 
 ---
 
-# Change last commit
+# Simple Changes
 
-Opps... I should change that last commit
+Opps...  I should change that
 
 ```bash
-# git commit --amend
+$ git commit --amend    # change last commit
+$ git cherry-pick       # I want that commit over there
+$ git revert            # Give me the anti-commit, commit
 ```
 
 ---
