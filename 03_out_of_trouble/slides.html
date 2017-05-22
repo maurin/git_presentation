@@ -45,7 +45,7 @@ name: agenda
 12. Keeping track of where one came from
 13. Changing history
 14. Extra Credit
-14. Additional resources
+15. Additional resources
 
 ???
 
@@ -186,14 +186,19 @@ $ git revert            # Give me the anti-commit, commit
 
 # Git Algebra
 
-* ref~ is shorthand for ref~1 and means the commit's first parent. ref~2 means the commit's first parent's first parent
-* ref^ is shorthand for ref^1 and means the commit's first parent. But where the two differ is that ref^2 means the commit's second parent.
+* ``ref~`` is shorthand for ``ref~1`` and means the commit's first parent
+* ``ref~2`` means the commit's first parent's first parent
+* ``ref^`` is shorthand for ``ref^1`` and means the commit's first parent
+* ``ref^2`` means the commit's second parent (Follows other branch of merge)
 
 ---
 
 .center[![Git graph](git-graph.svg)]
 
 ---
+
+
+
 
 class: center, middle
 
