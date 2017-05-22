@@ -39,8 +39,7 @@ name: agenda
 6. Selectively 'add' content
 7. Simple Changes
 8. Git Algebra
-9. cherry-pick
-10. revert
+
 11. Getting back to a know state
 12. Keeping track of where one came from
 13. Changing history
@@ -174,10 +173,13 @@ $ git add -i    # more control for building up staging
 
 # Simple Changes
 
-Opps...  I should change that
+Opps...  I need to fix that
 
 ```bash
 $ git commit --amend    # change last commit
+```
+
+```bash
 $ git cherry-pick       # I want that commit over there
 $ git revert            # Give me the anti-commit, commit
 ```
