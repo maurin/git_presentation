@@ -33,28 +33,13 @@ name: agenda
 
 1. Get Git
 2. Before Gitting started (env setup)
-3. Remarks
-4. Major Concepts (Review)
-5. Local Workflow (Review)
-6. Local Repo Commands (Review)
-7. Create GitHub Account
-8. Walkthrough: Working with Remotes
-9. Git Pull
-10. Workflows
-11. GitHub Pull Requests
-12. Other ways to share repo
-13. SSH Keys
-14. Additional resources
+3. Major Concepts (Review)
+4. Push/Fetch (Review)
+99. Additional resources
 
+???
 
-Review:
-- FS -add-> staging -commit-> Git DB -push-> remote db
-- only way to interact with remote db, push/fetch
-- allmost all commands are with local db
-- behind each commit is a tree representation of the fs at that point in 'time'
-- Branches are pointers
-- You only have a view of Git db at time of last fetch
-- Merge is a commit (with 2+ parents)
+# DELETE ME: --- Pablo Notes ---
 
 Review:
 Why was pull necessary
@@ -128,28 +113,44 @@ $ git config --global core.autocrlf true     # Windows
 
 ---
 
-class: center, middle
-
-# Remarks
-
-???
-
-Git uses similar terminology to SVN.
-SVN terminology not the same as git.
-Assume you don't know what words mean
-
----
-
 # Major Concepts (Review)
 
-* Distributed
-* Git tracks contents only
-* Each commit identified by a sha1 hash
+* Commit object identified by a sha1 hash
 * Behind each commit is a view of the file system tree
+* Branches are pointer
 * Merge *is* a commit (with two or more parents)
-* Branch is a pointer to the commit history
+* Only way to interact with remote Git DB: push/fetch
+* Almost *all* other commands operate on local DB
+* You only have a view of Git DB at time of last fetch
+
+
+* Normal workflow:
+```bash
+$ git add <some_file>           # add file to staging
+$ git commit                    # Store changes in local Git DB
+$ git push                      # Publish changes to remote Git DB
+```
+```bash
+$ git fetch <remote>            # Get objects from remote Git DB
+$ git merge <remote/branch>     # Merge lastest changes to current checked out branch
+``` 
+
+* I'm lost
+```bash
+$ git <subcommand> help
+```
 
 ---
+
+class: center, middle
+
+# Push/Fetch/Merge (Review)
+## Why was a pull necessary before push?
+
+---
+
+
+
 
 # Local Workflow (Review)
 
