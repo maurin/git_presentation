@@ -47,22 +47,6 @@ name: agenda
 
 ???
 
-DELETE ME: --- Pablo Notes ---
-
-Syntax for traversing graph
-
-
-
-git reset --hard
--- soft
--- mixed
-
-git reflog
-
-git rebase
-git rebase -i
-
-
 Best practice, create feature/topic branches
 - Branching/merging is cheap so do it create branch, delete when done.
 
@@ -117,7 +101,7 @@ $ git config --global core.autocrlf true     # Windows
 * Merge *is* a commit (with two or more parents)
 * Only way to interact with remote Git DB: push/fetch
 * Almost *all* other commands operate on local DB
-* You only have a view of Git DB at time of last fetch
+* You only have a view of remote Git DB at time of last fetch
 
 
 * Normal workflow:
@@ -129,7 +113,7 @@ $ git push                      # Publish changes to remote Git DB
 ```bash
 $ git fetch <remote>            # Get objects from remote Git DB
 $ git merge <remote/branch>     # Merge lastest changes to current checked out branch
-``` 
+```
 
 * I'm lost
 ```bash
@@ -161,7 +145,7 @@ $ git stash pop
 
 # Incrementally building commit
 
-Make commits *topic* based, not file based
+Make commits *topic* based, not *file* based
 
 ```bash
 $ git add -p    # select diff hunks
@@ -187,10 +171,10 @@ $ git revert            # Give me the anti-commit, commit
 
 # Git Algebra
 
-* ``ref~`` is shorthand for ``ref~1`` and means the commit's first parent
-* ``ref~2`` means the commit's first parent's first parent
-* ``ref^`` is shorthand for ``ref^1`` and means the commit's first parent
-* ``ref^2`` means the commit's second parent (Follows other branch of merge)
+* **ref~** is shorthand for **ref~1** and means the commit's first parent
+* **ref~2** means the commit's first parent's first parent
+* **ref^** is shorthand for **ref^1** and means the commit's first parent
+* **ref^2** means the commit's second parent (Follows other branch of merge)
 
 ---
 
