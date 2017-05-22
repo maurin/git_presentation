@@ -51,9 +51,6 @@ name: agenda
 
 DELETE ME: --- Pablo Notes ---
 
-git add -p  # not file wise
-git add -i
-
 git commit --amend
 
 Syntax for traversing graph
@@ -167,6 +164,15 @@ $ git stash pop
 ```
 
 ---
+
+# Incrementally building commit
+
+Make commits *topic* based, not file based
+
+```bash
+$ git add -p    # select diff hunks
+$ git add -i    # more control for building up staging
+```
 
 ---
 
