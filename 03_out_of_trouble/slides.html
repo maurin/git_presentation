@@ -36,7 +36,15 @@ name: agenda
 3. Major Concepts (Review)
 4. Push/Fetch (Review)
 5. Stashing work
-99. Additional resources
+6. Selectively 'add' content
+7. Change last commit
+8. Git Algebra
+9. cherry-pick
+10. revert
+11. Getting back to a know state
+12. Keeping track of where one came from
+13. Changing history
+14. Additional resources
 
 ???
 
@@ -148,139 +156,11 @@ class: center, middle
 
 ---
 
+git stash
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-----
-#DELETE FROM HERE
----
-
-
-# Local Workflow (Review)
-
-* File System
-* Staging Area
-* Git Database
 
 ---
-
-#  Local Repo Commands (Review)
-
-```bash
-# How to use a command?
-git help
-git help <command>
-
-# Stage changes before commit
-git add
-git rm
-git mv
-
-# Commit changes to Git database
-git commit
-
-# Branching and merging
-git branch
-git merge
-
-# List of file git should not manage
-.gitignore
-```
-
----
-
-class: center, middle
-
-# Create GitHub Account
-
----
-
-# Walkthrough: Working with Remotes
-
-A Git *remote* is a URL for another git database with which you can share code
-
-```bash
-git remote
-
-git fetch
-git push
-```
-
-???
-
-    create a repo at git hub
-    follow github commands to upload repo
-        remote
-        push
-
-    show at GitHub
-    modify on GitHub -add readme
-        fetch
-fetching changes from a remote.  This is your local view of the database at the remote side
-
-git URL for project
-    have people get it
-Cloaning project from git hub
-pushing your changes to a remote
-
-* A remote is a link to get to a git database that is somewhere else
-0.  Tell git how where to find the other database and give it a name
-
-1. fetch
-2. push
-
----
-
-# Git Pull
-
-pull = fetch + merge
-
-???
-
-pull = fetch + merge
-
-There is an implicit branch because these are distributed systems.  Therefore the solution is a merge
-
----
-
-# Workflows
-
-* Centralized
-* GitHub/Integration manager
-* Peer-Peer/Gradschool model
-
----
-
-class: center, middle
-
-# GitHub Pull Requests
-
----
-
-# Other ways to share repo
-
-* Thumb drive / mounted filesystem
-* another computer over ssh
-* git daemon
-* E-mail
-
----
-
-class: center, middle
-
-# SSH Keys
 
 ---
 
