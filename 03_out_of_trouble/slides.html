@@ -200,8 +200,9 @@ class: center
 
 ---
 
-# Getting back to a *known* state
-## Moving branch pointers
+# Getting back to a known state
+
+Moving branch pointers
 
 ```bash
 $ git reset
@@ -213,9 +214,29 @@ $ git reset --mixed
 $ git reset --hard      # DANGER
 ```
 
+---
+
+# Keeping track of where one came from
+
+```bash
+$ git reflog
+```
 
 ---
 
+# Changing History
+
+```bash
+git rebase      # default
+```
+
+```bash
+git rebase -i   # Interactive
+```
+
+*With great power comes great responsibility*
+
+---
 
 class: center, middle
 
@@ -235,7 +256,7 @@ https://www.atlassian.com/git/
 ### Interactive Git Cheatsheet
 http://ndpsoftware.com/git-cheatsheet.html
 
-### Git Algbra (grah image source)
+### Git Algbra (graph image source)
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
 
 ---
