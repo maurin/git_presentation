@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to use Git Version Control (Sharing Code)</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# How to use Git version control
+## Gitting out of trouble
+### (Making yourself look smart)
+
+---
+
+name: agenda
+
+# Agenda
+
+1. Get Git
+2. Before Gitting started (env setup)
+3. Major Concepts (Review)
+4. Push/Fetch (Review)
+5. Stashing work
+6. Selectively 'add' content
+7. Simple Changes
+8. Git Algebra
+9. Getting back to a know state
+10. Keeping track of where one came from
+11. Changing history
+12. Extra Credit
+13. Additional resources
+
+???
+
+Best practice, create feature/topic branches
+- Branching/merging is cheap so do it create branch, delete when done.
+
+
+---
+
+# Get Git
+
+Windows
+* Windows Git Installer (https://git-scm.com/download/win)
+* **Git for Windows package**
+```url
+https://git-for-windows.github.io/
+```
+
+Mac
+* Xcode provided
+* Mac Git installer (https://git-scm.com/download/mac)
+* **Homebrew**
+* MacPorts
+```bash
+$ brew install git
+```
+
+Linux
+* Use package manager of your choice
+```bash
+sudo apt-get install git
+```
+
+---
+
+# Before Starting - Environment Setup
+
+```bash
+# Username/email
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+# Line endings (pick the one for development platform)
+$ git config --global core.autocrlf input    # OS X or Linux
+$ git config --global core.autocrlf true     # Windows
+```
+
+---
+
+# Major Concepts (Review)
+
+* Commit object identified by a sha1 hash
+* Behind each commit is a view of the file system tree
+* Branches are pointer
+* Merge *is* a commit (with two or more parents)
+* Only way to interact with remote Git DB: push/fetch
+* Almost *all* other commands operate on local DB
+* You only have a view of remote Git DB at time of last fetch
+
+
+* Normal workflow:
+```bash
+$ git add <some_file>           # add file to staging
+$ git commit                    # Store changes in local Git DB
+$ git push                      # Publish changes to remote Git DB
+```
+```bash
+$ git fetch <remote>            # Get objects from remote Git DB
+$ git merge <remote/branch>     # Merge lastest changes to current checked out branch
+```
+
+* I'm lost
+```bash
+$ git <subcommand> help
+```
+
+---
+
+class: center, middle
+
+# Push/Fetch/Merge (Review)
+## Why was a pull necessary before push?
+
+---
+
+# Stashing work
+
+Useful to get a clean state without losing work
+
+```bash
+$ git stash [save]
+$ git stash list
+$ git stash apply
+$ git stash drop
+$ git stash pop
+```
+
+---
+
+# Incrementally building commit
+
+Make commits *topic* based, not *file* based
+
+```bash
+$ git add -p    # select diff hunks
+$ git add -i    # more control for building up staging
+```
+
+---
+
+# Simple Changes
+
+Opps...  I need to fix that
+
+```bash
+$ git commit --amend    # change last commit
+```
+
+```bash
+$ git cherry-pick       # I want that commit over there
+$ git revert            # Give me the anti-commit, commit
+```
+
+---
+
+# Git Algebra
+
+* **ref~** is shorthand for **ref~1** and means the commit's first parent
+* **ref~2** means the commit's first parent's first parent
+* **ref^** is shorthand for **ref^1** and means the commit's first parent
+* **ref^2** means the commit's second parent (Follows other branch of merge)
+
+---
+
+class: center
+
+![Git graph](git-graph.svg)
+
+---
+
+# Getting back to a known state
+
+Moving branch pointers
+
+```bash
+$ git reset
+```
+
+```bash
+$ git reset --soft
+$ git reset --mixed
+$ git reset --hard      # DANGER
+```
+
+---
+
+# Keeping track of where one came from
+
+```bash
+$ git reflog
+```
+
+---
+
+# Changing History
+
+```bash
+git rebase      # default
+```
+
+```bash
+git rebase -i   # Interactive
+```
+
+*With great power comes great responsibility*
+
+---
+
+class: center, middle
+
+# Extra Credit
+
+## How would you undo a 'git rebase'?
+---
+
+# Additional resources
+
+### ProGit
+https://git-scm.com/book/en/v2
+
+### Atlassian has very good tutorial
+https://www.atlassian.com/git/
+
+### Interactive Git Cheatsheet
+http://ndpsoftware.com/git-cheatsheet.html
+
+### Git Algbra (graph image source)
+http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
+
+---
+
+class: center, middle
+
+# Thank You
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
